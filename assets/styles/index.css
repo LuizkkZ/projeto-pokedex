@@ -48,13 +48,54 @@ header > button {
   box-shadow: 0px 7px 0px #5eaf62;
   margin-top: 20px;
   font-size: 23px;
-  font-weight: 23px;
+  font-weight: normal;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: black;
+  color: #000;
   font-weight: bold;
+  transition: background 0.5s, color 0.5s;
+}
+
+.link-pokemons:hover {
+  color: #fff;
+  background: #5eaf62;
+}
+
+.botao-flutuante {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  right: 10px;
+  bottom: 10px;
+  transition: width 1s, height 0.5s;
+  animation: inicio-pokebola 2s 1;
+}
+
+.botao-flutuante > img {
+  width: 100%;
+}
+
+.botao-flutuante:hover {
+  width: 124px;
+  height: 124px;
+}
+
+@keyframes inicio-pokebola {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0%;
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+
+  80% {
+    transform: translateY(-32px);
+  }
 }
 
 body {
@@ -106,5 +147,28 @@ main > div > p {
 
   .hamburguer-menu {
     display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  main {
+    flex-direction: row-reverse;
+  }
+
+  main > img,
+  main > div {
+    flex-grow: 1;
+  }
+
+  .pikachu {
+    max-width: 55%;
+  }
+
+  main > div {
+    justify-content: space-between;
+  }
+
+  main > div > p {
+    margin: 64px 0;
   }
 }

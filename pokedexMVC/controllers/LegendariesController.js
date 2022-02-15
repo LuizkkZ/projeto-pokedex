@@ -1,9 +1,9 @@
-const LegendaryModel = require('../models/LegendaryModel');
+const LegendariesService = require('../service/LegendariesService');
 
 const controller = {
   index: (request, response) => {
-    const pokemon = new LegendaryModel(1, 'Pokemon Zika','Morador da ZL', 'Maloca')
-    return response.json(pokemon);
+    const legendariesList = LegendariesService.listLegendaries()
+    return response.json(legendariesList);
   }
 }
 

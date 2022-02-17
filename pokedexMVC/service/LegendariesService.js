@@ -2,9 +2,19 @@ const LegendaryModel = require('../models/LegendaryModel');
 
 const LegendariesService = {
   listLegendaries: () => {
-    const pokemon1 = new LegendaryModel(1, 'Pokemon Zika','Morador da ZL', 'Maloca')
-    const pokemon2 = new LegendaryModel(1, 'Pokemon','Barra funda', 'Sem mundial')
-    return [pokemon1, pokemon2]
+    const Mew = new LegendaryModel(
+      1,
+      'Mew',
+      'Its DNA is almost the same as Mews. However, its size and disposition are vastly different.',
+      'Psychic',
+      '1000,000',
+      '1000,000',
+      '1000,000',
+      '1000,000',
+      '1000,000',
+      '1000,000',
+    )
+    return [Mew]
   }
 }
 

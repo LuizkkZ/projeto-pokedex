@@ -1,4 +1,4 @@
-const LegendariesService = require('../services/LegendariesService');
+const LegendariesService = require('../service/LegendariesService');
 
 const controller = {
     index: (req, res) => {

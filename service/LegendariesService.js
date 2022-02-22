@@ -1,5 +1,6 @@
 const LegendaryModel = require('../models/LegendaryModel');
 
+
 const LegendariesService = {
   listLegendaries: () => {
     const Mew = new LegendaryModel(

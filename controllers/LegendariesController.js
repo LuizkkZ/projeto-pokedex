@@ -37,7 +37,24 @@ const controller = {
         );
 
         return res.json(legendary)
-    }
+    },
+    update: (req, res) => {
+        const {
+            name,
+            description,
+            type,
+            healthPoints,
+            specialAttack,
+            defense,
+            attack,
+            experience,
+            specialDefense,
+        } = req.body;
+
+        if(!description) {
+            return res.status(400).json({ error: 'Descrição é obrigatória'})
+        }
+    }    
 }
 
 module.exports = controller;

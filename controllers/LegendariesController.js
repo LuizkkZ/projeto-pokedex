@@ -6,9 +6,7 @@ const controller = {
 
         const legendary = LegendariesService.listPokemonData(name);        
 
-        return res.render('legendaries', {
-            legendary
-        });      
+        return res.json(legendary);
     },
 
     //função responsável por receber as requisições do corpo da requisição "body" para criação de um legendary
